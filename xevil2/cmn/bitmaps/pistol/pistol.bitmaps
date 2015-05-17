@@ -1,0 +1,125 @@
+/*
+ *  XEvil(TM) Copyright (C) 1994,1999  Steve Hardt and Michael Judge
+ *  
+ *  The file, license.txt, distributed along with this source code contains
+ *  the license agreement for the XEvil source code and executable.
+ *  If you do not have this file, obtain a copy from 
+ *  http://www.xevil.com/docs/license.txt
+ * 
+ *  http://www.xevil.com
+ *  satan@xevil.com
+ */
+
+
+#if X11
+#include "gen_xpm/pistol/pistol_4.xpm"
+#endif
+
+
+
+Size Pistol::get_size_max() {
+  return context.weaponContext.itemContext.fallingContext.movingContext.sizes[CO_air];
+}
+
+
+
+PhysicalP Pistol::create(void *,WorldP w,LocatorP l,const Pos &pos) {
+  PhysicalP ret = new Pistol(w,l,pos);
+  assert(ret);
+  return ret;
+}
+
+
+
+static void pistol_get_item_info(Boolean &isItem,Boolean &isWeapon,
+                                 CMN_BITS_ID &iconId) {
+  isItem = True;
+  isWeapon = True;
+#if WIN32
+  iconId = IDB_HIPISTOL;
+#endif
+#if X11
+  iconId = 0;
+#endif
+}
+
+
+
+GunXdata Pistol::xdata;
+
+
+
+const GunContext Pistol::context = 
+{ /** GunContext **/
+  12, /* shotTime */
+  10, /* ammoInitial */
+  30, /* ammoMax */
+
+  { /** WeaponContext **/
+	SoundNames::PISTOL,
+
+    { /** ItemContext **/
+      True, /* persists */
+      5000, /* coolness */
+	  0, /*item use sound */
+      { /** FallingContext **/
+        {/** MovingContext **/
+#if X11
+          "black",False,
+          Xvars_BACKGROUND,True,
+#endif
+#if WIN32	  
+          RGB(0,0,0)/*"black"*/,False,
+          Xvars_BACKGROUND,True,
+#endif	  
+
+          /* animMax */
+          {0,0,0,0,1},
+          
+          /* sizes */
+          {{0,0},{0,0},{0,0},{0,0},{10,9},},
+          
+          /* offsets */
+          {{0}},
+	  
+          /* pixmapBits */
+          {{0},{0},{0},{0},{CMN_ID(pistol_4,IDB_HIPISTOL)}},
+          
+          /* maskBits */
+          {{0}},
+          
+          { /** PhysicalContext **/
+            5, /* health */
+            7, /* mass */
+            A_Pistol, /* classId */
+            "pistol", /* className */
+            
+            False, /* transmogifyTarget */
+            False, /* doppelUser */
+            False, /* potentialHuman */
+            False, /* potentialEnemy */
+            0, /* enemyWeight */
+            True, /* potentialWeapon */
+            False, /* potentialOtherItem */
+            0.0004f, /* objectWorldPercent */
+            0, /* levelMaxTimes */
+            {10,9}, /* sizeMax */
+            Pistol::create, /* create */
+            False, /* statsCreations */
+            False, /* statsUses */
+            False, /* statsDeaths */
+            NULL, /* get_stats */
+            NULL, /* arg */
+            Pistol::init_x, /* init_x */
+            Pistol::create_from_stream, /* create_from_stream */
+            pistol_get_item_info, /* get_item_info */
+          },
+          True, /* hiRes */
+          0, /* offsetGenerator */
+          0, /* transformOverride */
+          True, /* useXPM */
+        },
+      },
+    },
+  },
+};

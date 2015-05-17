@@ -1,0 +1,55 @@
+/*
+ *  XEvil(TM) Copyright (C) 1994,1999  Steve Hardt and Michael Judge
+ *  
+ *  The file, license.txt, distributed along with this source code contains
+ *  the license agreement for the XEvil source code and executable.
+ *  If you do not have this file, obtain a copy from 
+ *  http://www.xevil.com/docs/license.txt
+ * 
+ *  http://www.xevil.com
+ *  satan@xevil.com
+ */
+
+
+
+Size PhysMover::get_size_max() {
+  Size ret;
+  ret.set(W_MOVER_WIDTH_MAX,W_MOVER_HEIGHT_MAX);
+  return ret;
+}
+
+
+
+PhysicalP PhysMover::create(void *,WorldP,LocatorP,const Pos &) {
+  assert(0);
+  return NULL;
+}
+
+
+
+const PhysicalContext PhysMover::context = 
+{/** PhysicalContext **/
+  0, /* health */
+  0, /* mass */
+  A_PhysMover, /* classId */
+  "phys-mover", /* clas */
+
+  False, /* transmogifyTarget */
+  False, /* doppelUser */
+  False, /* potentialHuman */
+  False, /* potentialEnemy */
+  0, /* enemyWeight */
+  False, /* potentialWeapon */
+  False, /* potentialOtherItem */
+  0.0f, /* objectWorldPercent */
+  0, /* levelMaxTimes */
+  {32,16}, /* sizeMax */
+  PhysMover::create, /* create */
+  False, /* statsCreations */
+  False, /* statsUses */
+  False, /* statsDeaths */
+  NULL, /* get_stats */
+  NULL, /* arg */
+  PhysMover::init_x, /* init_x */
+  PhysMover::create_from_stream, /* create_from_stream */
+};

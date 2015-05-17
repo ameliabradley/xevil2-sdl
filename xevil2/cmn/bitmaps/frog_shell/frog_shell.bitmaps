@@ -1,0 +1,108 @@
+/*
+ *  XEvil(TM) Copyright (C) 1994,1999  Steve Hardt and Michael Judge
+ *  
+ *  The file, license.txt, distributed along with this source code contains
+ *  the license agreement for the XEvil source code and executable.
+ *  If you do not have this file, obtain a copy from 
+ *  http://www.xevil.com/docs/license.txt
+ * 
+ *  http://www.xevil.com
+ *  satan@xevil.com
+ */
+
+
+#if X11
+#include "gen_xpm/frog_shell/frog_shell_4.xpm"
+#include "gen_xpm/frog_shell/frog_shell_4b.xpm"
+#endif
+
+
+
+Size FrogShell::get_size() {
+  return context.movingContext.sizes[CO_air];
+}
+
+
+PhysicalP FrogShell::create(void *,WorldP,LocatorP,const Pos &) {
+  assert(0);
+  return NULL;
+}
+
+
+
+ShotXdata FrogShell::xdata;
+
+
+
+const ShotContext FrogShell::context = 
+{/** ShotContext **/
+  0, /* damage */ /* Ignored in this case. */
+  12, /* speed */
+  0, 
+  True,//REPEATING
+  {/** MovingContext **/
+#if X11
+    "black",False,
+    "green4",False,
+#endif
+#if WIN32
+    RGB(0,0,0)/*"black"*/,FALSE,
+    RGB(0,255,0)/*"green4"*/,FALSE,
+#endif
+    
+    /* animMax */
+    {0,0,0,0,2},
+    
+    /* sizes */
+    {{0,0},{0,0},{0,0},{0,0},{5,5},},
+    
+    /* offsets */
+    {{0,0},{0,0},{0,0},{0,0},{0,0},},
+    
+    /* pixmapBits */
+    {{0},{0},{0},{0},
+     {CMN_ID(frog_shell_4,IDB_FROG_SHELL),
+      CMN_ID(frog_shell_4b,IDB_FROG_SHELLB),},},
+    
+    /* maskBits */
+    {{0}},
+
+    {/** PhysicalContext **/
+      1, /* health */
+      0, /* mass */
+      A_FrogShell, /* classId */
+      "frog-shell", /* clas */
+
+      False, /* transmogifyTarget */
+      False, /* doppelUser */
+      False, /* potentialHuman */
+      False, /* potentialEnemy */
+      0, /* enemyWeight */
+      False, /* potentialWeapon */
+      False, /* potentialOtherItem */
+      0.0f, /* objectWorldPercent */
+      0, /* levelMaxTimes */
+      {5,5}, /* sizeMax */
+      FrogShell::create, /* create */
+      True, /* statsCreations */
+      False, /* statsUses */
+      False, /* statsDeaths */
+      FrogShell::get_stats, /* get_stats */
+      NULL, /* arg */
+      FrogShell::init_x, /* init_x */
+      FrogShell::create_from_stream, /* create_from_stream */
+    },
+    True, /* hiRes */
+    0, /* offsetGenerator */
+    0, /* transformOverride */
+    True, /* useXPM */
+  },
+};
+
+
+
+// Used by AltarOfSin
+const MorphedContext FrogShell::morphedContext =
+{ /** MorphedContext **/
+  200, /* revertTime */
+};

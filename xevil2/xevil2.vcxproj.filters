@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\cmn">
+      <UniqueIdentifier>{8a3228fd-f1dc-4326-9487-13453afe2cd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\win32">
+      <UniqueIdentifier>{9b8bd817-2486-4824-8970-0a30f180e9f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cmn">
+      <UniqueIdentifier>{c8f2e03e-c250-48ec-a99a-de8bb6a06905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\win32">
+      <UniqueIdentifier>{e25ac80a-3b23-46f0-b87a-a675bb92c19b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="win32\ddraw.lib" />
+    <Library Include="win32\dsound.lib" />
+    <Library Include="win32\SDL2.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cmn\sound_cmn.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\streams.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\ui_cmn.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\utils.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\world.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\xetp.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\xetp_basic.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\actual.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\area.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\coord.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\game.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\game_style.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\id.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\intel.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\l_agreement.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\locator.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\neth.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\physical.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="cmn\role.h">
+      <Filter>Header Files\cmn</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\xevilserverstatus.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\xviewport.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\aboutdialog.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\connectdlg.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\difficulty.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\fileman.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\firepal.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\fogpal.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\fsstatus.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\glowpal.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\keyhitdlg.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\keysets.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\optionsdlg.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\palmod.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\resource.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\runserverdlg.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\s_man.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\sound.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\specialcontrols.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\stdafx.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\storydlg.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\timedlg.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\ui.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\uiplayer.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\uiserver.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\wheel.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\xdata.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\xevil.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cmn\streams.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\ui_cmn.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\utils.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\world.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\xetp.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\xetp_basic.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\actual.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\area.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\coord.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\game.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\game_style.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\id.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\intel.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\l_agreement.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\locator.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\physical.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\role.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="cmn\sound_cmn.cpp">
+      <Filter>Source Files\cmn</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\xdata.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\xevil.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\xevilserverstatus.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\xviewport.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\aboutdialog.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\connectdlg.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\difficulty.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\draw.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\fileman.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\firepal.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\fogpal.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\fsstatus.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\glowpal.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\keyhitdlg.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\keysets.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\optionsdlg.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\palmod.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\runserverdlg.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\s_man.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\sound.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\specialcontrols.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\stdafx.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\storydlg.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\timedlg.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\ui.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\uiplayer.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\uiserver.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\wheel.cpp">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32\xevil.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

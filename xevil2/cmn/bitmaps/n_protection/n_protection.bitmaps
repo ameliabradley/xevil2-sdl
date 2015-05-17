@@ -1,0 +1,70 @@
+/*
+ *  XEvil(TM) Copyright (C) 1994,1999  Steve Hardt and Michael Judge
+ *  
+ *  The file, license.txt, distributed along with this source code contains
+ *  the license agreement for the XEvil source code and executable.
+ *  If you do not have this file, obtain a copy from 
+ *  http://www.xevil.com/docs/license.txt
+ * 
+ *  http://www.xevil.com
+ *  satan@xevil.com
+ */
+
+
+
+#define N_PROTECTION_N 3
+
+
+
+Size NProtection::get_size_max() {
+  assert(0);
+  return context.physicalContext.sizeMax;
+}
+
+
+
+PhysicalP NProtection::create(void *,WorldP,LocatorP,const Pos &) {
+  assert(0);
+  return NULL;
+}
+
+
+
+ProtectionXdata NProtection::xdata;
+
+
+
+const ProtectionContext NProtection::context = 
+{ /** ProtectionContext **/
+#if X11
+  "steelblue", /* colorName */
+#endif
+#if WIN32
+  RGB(0,0,255), /* color blue */
+#endif
+  { /** PhysicalContext **/
+    0, /* health */
+    0, /* mass */
+    A_NProtection, /* classId */
+    "n-protection", /* clas */
+
+    False, /* transmogifyTarget */
+    False, /* doppelUser */
+    False, /* potentialHuman */
+    False, /* potentialEnemy */
+    0, /* enemyWeight */
+    False, /* potentialWeapon */
+    False, /* potentialOtherItem */
+    0.0f, /* objectWorldPercent */
+    0, /* levelMaxTimes */
+    {0,0}, /* sizeMax */
+    NProtection::create, /* create */
+    False, /* statsCreations */
+    False, /* statsUses */
+    False, /* statsDeaths */
+    NULL, /* get_stats */
+    NULL, /* arg */
+    NProtection::init_x, /* init_x */
+    NProtection::create_from_stream, /* create_from_stream */
+  },
+};

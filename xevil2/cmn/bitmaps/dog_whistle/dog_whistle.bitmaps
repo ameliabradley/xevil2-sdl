@@ -1,0 +1,123 @@
+/*
+ *  XEvil(TM) Copyright (C) 1994,1999  Steve Hardt and Michael Judge
+ *  
+ *  The file, license.txt, distributed along with this source code contains
+ *  the license agreement for the XEvil source code and executable.
+ *  If you do not have this file, obtain a copy from 
+ *  http://www.xevil.com/docs/license.txt
+ * 
+ *  http://www.xevil.com
+ *  satan@xevil.com
+ */
+
+
+#if X11
+#include "gen_xpm/dog_whistle/dog_whistle_4.xpm"
+#endif
+
+
+
+Size DogWhistle::get_size_max() {
+  return context.weaponContext.itemContext.fallingContext.
+    movingContext.sizes[CO_air];
+}
+
+
+
+PhysicalP DogWhistle::create(void *,WorldP w,LocatorP l,const Pos &pos) {
+  PhysicalP ret = new DogWhistle(w,l,pos);
+  assert(ret);
+  return ret;
+}
+
+
+
+static void dog_whistle_get_item_info(Boolean &isItem,Boolean &isWeapon,
+                                      CMN_BITS_ID &iconId) {
+  isItem = True;
+  isWeapon = True;
+#if WIN32
+  iconId = IDB_DOGWHISTLE;
+#endif
+#if X11
+  iconId = 0;
+#endif
+}
+
+
+
+WeaponXdata DogWhistle::xdata;
+
+
+
+const WhistleContext DogWhistle::context = 
+{ /** WhistleContext **/
+  -30, /* coolnessNoAmmo */
+  2, /* ammo */
+  20, /* alternateChance */
+  { /** WeaponContext **/
+    0,
+    { /** ItemContext **/
+      True, /* persists */
+      10000, /* coolness */
+      0, /*item use sound */
+      { /** FallingContext **/
+        {/** MovingContext **/
+#if X11
+          "black",False,
+          "bisque4",False,
+#endif
+#if WIN32
+          RGB(0,0,0)/*"black"*/,FALSE,
+          Xvars_BACKGROUND,TRUE,
+#endif	        
+          /* animMax */
+          {0,0,0,0,1},
+          
+          /* sizes */
+          {{0,0},{0,0},{0,0},{0,0},{4,13},},
+          
+          /* offsets */
+          {{0}},
+          
+          /* pixmapBits */
+          {{0},{0},{0},{0},{CMN_ID(dog_whistle_4,IDB_DOGWHISTLE)},},
+          
+          /* maskBits */
+          {{0}},
+          
+          { /** PhysicalContext **/
+            5, /* health */
+            9, /* mass */
+            A_DogWhistle, /* classId */
+            "dog-whistle", /* className */
+            
+            False, /* transmogifyTarget */
+            False, /* doppelUser */
+            False, /* potentialHuman */
+            False, /* potentialEnemy */
+            0, /* enemyWeight */
+            True, /* potentialWeapon */
+            False, /* potentialOtherItem */
+            .0001f, /* objectWorldPercent */
+            2, /* levelMaxTimes */
+            {4,13}, /* sizeMax */
+            DogWhistle::create, /* create */
+            False, /* statsCreations */
+            False, /* statsUses */
+            False, /* statsDeaths */
+            NULL, /* get_stats */
+            NULL, /* arg */
+            DogWhistle::init_x, /* init_x */
+            DogWhistle::create_from_stream, /* create_from_stream */
+            dog_whistle_get_item_info, /* get_item_info */
+          },
+          True, /* hiRes */
+          0, /* offsetGenerator */
+          0, /* transformOverride */
+          True, /* useXPM */
+        },
+      },
+    },
+  },
+};

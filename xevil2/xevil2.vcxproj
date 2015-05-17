@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="win32\ddraw.lib" />
+    <Library Include="win32\dsound.lib" />
+    <Library Include="win32\SDL2.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cmn\actual.h" />
+    <ClInclude Include="cmn\area.h" />
+    <ClInclude Include="cmn\coord.h" />
+    <ClInclude Include="cmn\game.h" />
+    <ClInclude Include="cmn\game_style.h" />
+    <ClInclude Include="cmn\id.h" />
+    <ClInclude Include="cmn\intel.h" />
+    <ClInclude Include="cmn\locator.h" />
+    <ClInclude Include="cmn\l_agreement.h" />
+    <ClInclude Include="cmn\neth.h" />
+    <ClInclude Include="cmn\physical.h" />
+    <ClInclude Include="cmn\role.h" />
+    <ClInclude Include="cmn\sound_cmn.h" />
+    <ClInclude Include="cmn\streams.h" />
+    <ClInclude Include="cmn\ui_cmn.h" />
+    <ClInclude Include="cmn\utils.h" />
+    <ClInclude Include="cmn\world.h" />
+    <ClInclude Include="cmn\xetp.h" />
+    <ClInclude Include="cmn\xetp_basic.h" />
+    <ClInclude Include="win32\aboutdialog.h" />
+    <ClInclude Include="win32\connectdlg.h" />
+    <ClInclude Include="win32\difficulty.h" />
+    <ClInclude Include="win32\fileman.h" />
+    <ClInclude Include="win32\firepal.h" />
+    <ClInclude Include="win32\fogpal.h" />
+    <ClInclude Include="win32\fsstatus.h" />
+    <ClInclude Include="win32\glowpal.h" />
+    <ClInclude Include="win32\keyhitdlg.h" />
+    <ClInclude Include="win32\keysets.h" />
+    <ClInclude Include="win32\optionsdlg.h" />
+    <ClInclude Include="win32\palmod.h" />
+    <ClInclude Include="win32\resource.h" />
+    <ClInclude Include="win32\runserverdlg.h" />
+    <ClInclude Include="win32\sound.h" />
+    <ClInclude Include="win32\specialcontrols.h" />
+    <ClInclude Include="win32\stdafx.h" />
+    <ClInclude Include="win32\storydlg.h" />
+    <ClInclude Include="win32\s_man.h" />
+    <ClInclude Include="win32\timedlg.h" />
+    <ClInclude Include="win32\ui.h" />
+    <ClInclude Include="win32\uiplayer.h" />
+    <ClInclude Include="win32\uiserver.h" />
+    <ClInclude Include="win32\wheel.h" />
+    <ClInclude Include="win32\xdata.h" />
+    <ClInclude Include="win32\xevil.h" />
+    <ClInclude Include="win32\xevilserverstatus.h" />
+    <ClInclude Include="win32\xviewport.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cmn\actual.cpp" />
+    <ClCompile Include="cmn\area.cpp" />
+    <ClCompile Include="cmn\coord.cpp" />
+    <ClCompile Include="cmn\game.cpp" />
+    <ClCompile Include="cmn\game_style.cpp" />
+    <ClCompile Include="cmn\id.cpp" />
+    <ClCompile Include="cmn\intel.cpp" />
+    <ClCompile Include="cmn\locator.cpp" />
+    <ClCompile Include="cmn\l_agreement.cpp" />
+    <ClCompile Include="cmn\physical.cpp" />
+    <ClCompile Include="cmn\role.cpp" />
+    <ClCompile Include="cmn\sound_cmn.cpp" />
+    <ClCompile Include="cmn\streams.cpp" />
+    <ClCompile Include="cmn\ui_cmn.cpp" />
+    <ClCompile Include="cmn\utils.cpp" />
+    <ClCompile Include="cmn\world.cpp" />
+    <ClCompile Include="cmn\xetp.cpp" />
+    <ClCompile Include="cmn\xetp_basic.cpp" />
+    <ClCompile Include="win32\aboutdialog.cpp" />
+    <ClCompile Include="win32\connectdlg.cpp" />
+    <ClCompile Include="win32\difficulty.cpp" />
+    <ClCompile Include="win32\draw.cpp" />
+    <ClCompile Include="win32\fileman.cpp" />
+    <ClCompile Include="win32\firepal.cpp" />
+    <ClCompile Include="win32\fogpal.cpp" />
+    <ClCompile Include="win32\fsstatus.cpp" />
+    <ClCompile Include="win32\glowpal.cpp" />
+    <ClCompile Include="win32\keyhitdlg.cpp" />
+    <ClCompile Include="win32\keysets.cpp" />
+    <ClCompile Include="win32\optionsdlg.cpp" />
+    <ClCompile Include="win32\palmod.cpp" />
+    <ClCompile Include="win32\runserverdlg.cpp" />
+    <ClCompile Include="win32\sound.cpp" />
+    <ClCompile Include="win32\specialcontrols.cpp" />
+    <ClCompile Include="win32\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="win32\storydlg.cpp" />
+    <ClCompile Include="win32\s_man.cpp" />
+    <ClCompile Include="win32\timedlg.cpp" />
+    <ClCompile Include="win32\ui.cpp" />
+    <ClCompile Include="win32\uiplayer.cpp" />
+    <ClCompile Include="win32\uiserver.cpp" />
+    <ClCompile Include="win32\wheel.cpp" />
+    <ClCompile Include="win32\xdata.cpp" />
+    <ClCompile Include="win32\xevil.cpp" />
+    <ClCompile Include="win32\xevilserverstatus.cpp" />
+    <ClCompile Include="win32\xviewport.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32\xevil.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{09259A34-8DFB-4DF9-9124-101925AFE32F}</ProjectGuid>
+    <RootNamespace>xevil2</RootNamespace>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>sdl_dev\include;win32;cmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ole32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>sdl_dev\include;win32;cmn;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ole32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

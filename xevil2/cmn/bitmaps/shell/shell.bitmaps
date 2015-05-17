@@ -1,0 +1,98 @@
+/*
+ *  XEvil(TM) Copyright (C) 1994,1999  Steve Hardt and Michael Judge
+ *  
+ *  The file, license.txt, distributed along with this source code contains
+ *  the license agreement for the XEvil source code and executable.
+ *  If you do not have this file, obtain a copy from 
+ *  http://www.xevil.com/docs/license.txt
+ * 
+ *  http://www.xevil.com
+ *  satan@xevil.com
+ */
+
+
+#if X11
+#include "gen_xpm/shell/shell_4.xpm"
+#endif
+
+
+
+Size Shell::get_size() {
+  return context.movingContext.sizes[CO_air];
+} 
+
+
+PhysicalP Shell::create(void *,WorldP,LocatorP,const Pos &) {
+  assert(0);
+  return NULL;
+}
+
+
+
+ShotXdata Shell::xdata;
+
+
+
+const ShotContext Shell::context = 
+{/** ShotContext **/
+  50, /* damage */
+  13, /* speed */
+  0,  /* soundid */
+  False,/* Repeating */
+
+  {/** MovingContext **/
+#if X11
+    "black",False,
+    "gray",True,
+#endif
+#if WIN32
+    RGB(0,0,0)/*black*/,False,
+    RGB(192,192,192)/*"gray"*/,True,
+#endif
+    
+    /* animMax */
+    {0,0,0,0,1},
+    
+    /* sizes */
+    {{0,0},{0,0},{0,0},{0,0},{6,6},},
+
+    /* offsets */
+    {{0,0},{0,0},{0,0},{0,0},{0,0},},
+    
+    /* pixmapBits */
+    {{0},{0},{0},{0},{CMN_ID(shell_4,IDB_SHELL)},},
+    
+    /* maskBits */
+    {{0}},
+
+    {/* PhysicalContext */
+      1, /* health */
+      0, /* mass */
+      A_Shell, /* classId */
+      "shell", /* className */
+
+      False, /* transmogifyTarget */
+      False, /* doppelUser */
+      False, /* potentialHuman */
+      False, /* potentialEnemy */
+      0, /* enemyWeight */
+      False, /* potentialWeapon */
+      False, /* potentialOtherItem */
+      0.0f, /* objectWorldPercent */
+      0, /* levelMaxTimes */
+	  {6,6}, /* sizeMax */
+      Shell::create, /* create */
+      True, /* statsCreations */
+      False, /* statsUses */
+      False, /* statsDeaths */
+      Shell::get_stats, /* get_stats */
+      NULL, /* arg */
+      Shell::init_x, /* init_x */
+      Shell::create_from_stream, /* create_from_stream */
+    },
+    True, /* hiRes */
+    0, /* offsetGenerator */
+    0, /* transformOverride */
+    True, /* useXPM */
+  },
+};
